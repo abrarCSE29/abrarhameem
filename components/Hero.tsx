@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           Hi, I'm <span className="text-blue-600">Abrar Hameem</span>
         </h1>
         <p className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
-          A passionate <span className="text-slate-900 font-semibold">Junior AI Engineer</span> specializing in LLMs, 
+          A passionate <span className="text-slate-900 font-semibold">AI Engineer</span> specializing in LLMs, 
           Computer Vision, and scalable Backend systems. Transforming complex data into intelligent solutions.
         </p>
         
