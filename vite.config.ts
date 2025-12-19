@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: true,
+        cors: {
+          origin: "https://abrarhameem.duckdns.org",
+        },
       },
       plugins: [react()],
       define: {
