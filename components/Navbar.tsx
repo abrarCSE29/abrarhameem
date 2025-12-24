@@ -1,9 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
 import { PERSONAL_INFO } from '../constants';
+import EmailModal from './EmailModal';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+
+  const openEmailModal = () => {
+    setIsEmailModalOpen(true);
+  };
+
+  const closeEmailModal = () => {
+    setIsEmailModalOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,13 +58,18 @@ const Navbar: React.FC = () => {
             </a>
           ))}
         </div>
-        <a
-          href={`mailto:${PERSONAL_INFO.email}`}
+        <button
+          onClick={openEmailModal}
           className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
         >
           Hire Me
-        </a>
+        </button>
       </div>
+      
+      <EmailModal 
+        isOpen={isEmailModalOpen} 
+        onClose={closeEmailModal} 
+      />
     </nav>
   );
 };

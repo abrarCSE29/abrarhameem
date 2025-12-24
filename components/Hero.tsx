@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../constants';
 import PdfModal from './PdfModal';
+import EmailModal from './EmailModal';
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
 
   const openResumeModal = () => {
     setIsModalOpen(true);
@@ -12,6 +14,14 @@ const Hero: React.FC = () => {
 
   const closeResumeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const openEmailModal = () => {
+    setIsEmailModalOpen(true);
+  };
+
+  const closeEmailModal = () => {
+    setIsEmailModalOpen(false);
   };
   const scrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -69,13 +79,13 @@ const Hero: React.FC = () => {
           >
             <i className="fab fa-github"></i>
           </a>
-          <a 
-            href={`mailto:${PERSONAL_INFO.email}`} 
+          <button
+            onClick={openEmailModal}
             className="hover:text-slate-900 transition-colors"
             aria-label="Email"
           >
             <i className="far fa-envelope"></i>
-          </a>
+          </button>
           <a 
             href={PERSONAL_INFO.codeforces} 
             target="_blank" 
@@ -92,6 +102,10 @@ const Hero: React.FC = () => {
         isOpen={isModalOpen} 
         onClose={closeResumeModal} 
         pdfUrl={PERSONAL_INFO.resumePdf} 
+      />
+      <EmailModal 
+        isOpen={isEmailModalOpen} 
+        onClose={closeEmailModal} 
       />
     </section>
   );
