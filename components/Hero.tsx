@@ -1,8 +1,18 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../constants';
+import PdfModal from './PdfModal';
 
 const Hero: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openResumeModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeResumeModal = () => {
+    setIsModalOpen(false);
+  };
   const scrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const element = document.getElementById('projects');
@@ -33,6 +43,12 @@ const Hero: React.FC = () => {
           >
             View Projects
           </a>
+          <button
+            onClick={openResumeModal}
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all shadow-lg flex items-center gap-2"
+          >
+            <i className="fas fa-eye"></i> View Resume
+          </button>
           <a
             href={PERSONAL_INFO.linkedin}
             target="_blank"
@@ -71,6 +87,12 @@ const Hero: React.FC = () => {
           </a>
         </div>
       </div>
+      
+      <PdfModal 
+        isOpen={isModalOpen} 
+        onClose={closeResumeModal} 
+        pdfUrl={PERSONAL_INFO.resumePdf} 
+      />
     </section>
   );
 };

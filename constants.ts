@@ -9,6 +9,7 @@ export const PERSONAL_INFO = {
   linkedin: "https://www.linkedin.com/in/abrar-hameem/",
   github: "https://github.com/abrarcse29",
   codeforces: "https://codeforces.com/profile/abrar29",
+  resumePdf: "https://drive.google.com/file/d/1_GaoIuhPx_vZ4KWMnuo6Sz5YiS7UQ2HP/view?usp=drive_link",
 };
 
 export const EXPERIENCES: Experience[] = [
