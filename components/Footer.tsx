@@ -48,7 +48,6 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 mt-12 pt-8 border-t border-slate-50 text-center">
         <p className="text-xs text-slate-400">
           © {new Date().getFullYear()} Abrar Hameem. All rights reserved. 
-          Built with React & Gemini API.
         </p>
       </div>
     </footer>
