@@ -99,11 +99,11 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "AI/ML",
-    items: ["PyTorch", "TensorFlow", "Hugging Face", "LangChain", "YOLO", "Langsmith", "MLFlow", "OpenCV"]
+    items: ["PyTorch", "TensorFlow", "Hugging Face", "LangChain", "YOLO", "Langsmith", "MLFlow", "OpenCV","RAG", "Vector DB", ]
   },
   {
     category: "Backend & Frameworks",
-    items: ["Node.js", "React.js", "Flask", "Django", "Celery", "RabbitMQ", "Ollama"]
+    items: ["Node.js", "React.js", "Flask", "FastAPI","Django", "Celery", "RabbitMQ", "Ollama", "Celery", "RabitMQ"]
   },
   {
     category: "Databases",
