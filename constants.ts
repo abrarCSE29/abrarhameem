@@ -113,6 +113,7 @@ export const SKILLS: SkillCategory[] = [
     category: "Tools",
     items: ["Git", "Github", "Docker"]
   }
+  
 ];
 
 export const EDUCATION: Education[] = [
