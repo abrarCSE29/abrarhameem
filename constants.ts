@@ -103,7 +103,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Backend & Frameworks",
-    items: ["Node.js", "React.js", "Flask", "FastAPI","Django", "Celery", "RabbitMQ", "Ollama", "Celery", "RabitMQ"]
+    items: ["Node.js", "React.js", "Flask", "FastAPI","Django", "Celery", "RabbitMQ", "Ollama", "Celery"]
   },
   {
     category: "Databases",
